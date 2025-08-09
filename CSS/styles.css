@@ -1,0 +1,356 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: "Chivo Mono", 'Courier New', Courier, monospace;
+    background-color: #f2f2f2;
+}
+
+div.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.title{
+    flex: 1;
+    font-size: x-large;
+    padding: 20px;
+}
+
+.logo{
+    max-width: 200px;
+    height: auto;
+}
+
+h1 a{
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+}
+
+h1 a:hover{
+    background-color: #333333;
+    color: #f2f2f2;
+    border: #333333 solid 5px;
+    border-radius: 10px;
+}
+
+div.intro, footer{
+    margin-bottom: 10px;
+}
+
+p{
+    line-height: 2em;
+}
+
+hr{
+    margin: 1.5em auto;
+    width: 85%;
+    border: solid 1px #333333;
+}
+
+nav, div.cycle-slideshow, .thumbnail{
+    margin-bottom: 2em;
+    border: solid #333333 2px;
+    border-radius: 10px;
+    box-shadow: 10px 10px #333333;
+    overflow: hidden;
+}
+
+nav{
+    margin-bottom: 2em;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+li{
+    list-style-type: none;
+    margin: 0 25px;
+    width: 250px;
+    line-height: 3em;
+    font-size: 20px;
+}
+
+nav a{
+    text-decoration-color: transparent;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+    color: #333333;
+    transition: text-decoration 0.25s ease-in;
+}
+
+nav a:hover{
+    text-decoration: underline #333333 2px;
+}
+
+h2{
+    margin: 10px 0;
+}
+
+div.cycle-slideshow{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cycle-pager { 
+    text-align: center; 
+    width: 100%; 
+    font-family: "Chivo Mono" 'Courier New', Courier, monospace; 
+    font-size: 50px;  
+    cursor: pointer;
+}
+
+.cycle-pager span{
+    color: transparent;
+    -webkit-text-stroke: 1px #333333;
+    transition: color 0.25s linear;
+}
+
+.cycle-pager span.cycle-pager-active { 
+    color: #333333;
+}
+
+.cycle-pager span:hover{
+    color: #333333;
+}
+
+article{
+    width: 100%;
+    padding: 1em;
+    flex: column;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+h4{ 
+    font-size: larger;
+    margin-bottom: 15px;
+}
+
+img{
+    width:100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recent img{
+    width: 80%;
+}
+
+.thumbnail{
+    max-width: 900px;
+    padding: 1em;
+    margin: 1em 0 2em 0;
+    width: 95%;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.25s ease-in;
+}
+
+.thumbnail:hover{
+    box-shadow: 10px 10px #333333;
+}
+
+.entry{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.entry p{
+    width: 70%;
+    margin-top: 0.5em;
+}
+
+.bio img{
+    max-width: 400px;
+    float: left;
+    margin: 0 2em 1em 0;
+}
+
+.diary img{
+    width: 100%;
+}
+
+footer{
+    font-style: italic;
+    line-height: 1.75em;
+}
+
+.preview{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.readmore, .preview p{
+    width: 95%;
+}
+
+.readmore{
+    margin-top: 1.5em;
+    text-align: right;
+    text-decoration-color: transparent;
+    transition: text-decoration 0.25s ease-in;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+.readmore:hover{
+    text-decoration: underline #333333 2px;
+}
+
+.content{
+    margin: 0 auto;
+    width: 50%;
+}
+
+.content h2{
+    text-align: center;
+}
+
+.content img{
+    width: 100%;
+    padding: 2em;
+    border-radius: 40px;
+}
+
+@media screen and (min-width:921px) and (max-width: 1255px){
+    .entry{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thumbnail{
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (min-width:681px) and (max-width: 920px){
+    div.title{
+        font-size: large;
+    }
+
+    nav{
+        border: none;
+        box-shadow: none;
+    }
+
+    li {
+        width: 90%;
+        border: solid #333333 2px;
+        border-radius: 6px;
+        box-shadow: 6px 6px #333333;
+        overflow: hidden;
+        margin: 10px; 
+        font-size: medium;
+    }
+
+    h4, p{
+        text-align: left;
+    }
+
+    .bio img{
+        margin-bottom: -0.5em;
+    }
+
+    .entry{
+        margin: 0 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .entry p{
+        width: 100%;
+    }
+
+    .content{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width: 680px){
+    .logo{
+        max-width: 100px;
+    }
+
+    header{
+        margin: 0;
+    }
+
+    div.title{
+        font-size: medium;
+    }
+    
+    ul{
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        border: none;
+        box-shadow: none;
+    }
+    li {
+        width: 90%;
+        border: solid #333333 2px;
+        border-radius: 6px;
+        box-shadow: 6px 6px #333333;
+        overflow: hidden;
+        margin: 10px; 
+    }
+    nav a {
+        margin-left: 20px;
+    }
+
+    h4, p{
+        text-align: left;
+    }
+
+    .archive{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .entry{
+        margin: 0 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .entry p{
+        width: 100%;
+    }
+
+    .bio img{
+        float: none;
+    }
+
+    .cycle-pager{
+        font-size: 40px;
+    }
+
+    .content{
+        width: 100%;
+    }
+}
+
